@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket Game Logic By Gayas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bat Ball Stump Game (MG's Logic)</h1>
+
+  <button class="choice-button" id="bat" onclick="showResults('bat')"><img src="./images/bat.png" alt="bat-image" class = "choice-image"></button>
+  <button class="choice-button" id="ball" onclick="showResults('ball')"><img src="./images/ball.png" alt="ball-image" class = "choice-image"></button>
+  <button class="choice-button" id="stump" onclick="showResults('stump')"><img src="./images/stump.png" alt="wicket-image" class = "choice-image"></button>
+  
+  <div class="results">
+    <h2 id="usrchoice"></h2>
+    <h2 id="compchoice"></h2>
+    <h2 id="result"></h2>
+  </div>
+
+  <div class="score-board">
+    <span id="win"></span>
+    <span id="lost"></span>
+    <span id="tie"></span>
+  </div><br>
+
+  <button id="reset" onclick="resetScore()">Reset Score</button>
+
+  <!-- <script>
+    let score = {
+      win : 0,
+      lost : 0,
+      tie : 0
+    };
+    // Function to Generate Computer choice
+    // let generateComputerChoice = () => {
+
+    //   let randomNum = Math.round(Math.random() * 3);
+    //   let computerChoice;
+
+    //   // Defining computerChoices Based on randomNumber
+    //   if (randomNum>0 && randomNum<=1){
+    //     computerChoice = 'bat';
+    //   } else if (randomNum>1 && randomNum<=2) {
+    //     computerChoice = 'ball';
+    //   } else {
+    //     computerChoice = 'stump';
+    //   }
+    //   return computerChoice
+    // }
+    function generateComputerChoice () {
+      let randomNum = Math.round(Math.random() * 3);
+      let computerChoice;
+
+      // Defining computerChoices Based on randomNumber
+      if (randomNum < 1){
+        computerChoice = 'bat';
+      } else if (randomNum >= 1) {
+        computerChoice = 'ball';
+      } else if (randomNum >= 2){
+        computerChoice = 'stump';
+      }
+      // console.log(randomNum)
+      return computerChoice
+    }
+
+    // Function to compare the userChoice and computerChoice
+    function compareValues(userChoice, computerChoice) {
+      if (userChoice===computerChoice){
+        score.tie = score.tie+1
+      } else if (userChoice === 'bat' && computerChoice ==='ball' || 
+                userChoice === 'ball' && computerChoice ==='stump' || 
+                userChoice === 'stump' && computerChoice ==='bat'){
+                score.win = score.win+1
+      } else if (userChoice === 'bat' && computerChoice ==='stump' || 
+                userChoice === 'ball' && computerChoice ==='bat' || 
+                userChoice === 'stump' && computerChoice ==='ball'){
+                score.lost = score.lost+1
+      }
+    }
+
+    // Function to Evaluate Results
+    function showResults (userChoice) {
+      let computerChoice = generateComputerChoice()
+      compareValues(userChoice, computerChoice)
+      updateScore(score)
+    }
+
+    function updateScore(score){
+      document.querySelector('#win').innerText = `WIN : ${score.win}`
+      document.querySelector('#lost').innerText = `LOST : ${score.lost}`
+      document.querySelector('#tie').innerText = `TIE : ${score.tie}`
+    }
+
+    function resetScore() {
+      score = {
+      win : 0,
+      lost : 0,
+      tie : 0
+      }
+      updateScore(score)
+    } 
+  </script> -->
+  <script src="indexv4.js"></script>
+</body>
+</html>
+

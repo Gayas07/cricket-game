@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+  background-color: rgb(110, 75, 75);
+}
+
+.choice-button {
+  height: 100px;
+  width: 100px;
+  border: none;
+  margin: 10px;
+  background-color: rgb(164, 212, 130);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.choice-image {
+  height: 75px;
+}
+
+#score_board {
+  margin: 30px;
+}
+
+.results {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.score-board {
+  font-weight: bolder;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#reset {
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 15px;
+  background-color: rgb(233, 5, 5);
+}
